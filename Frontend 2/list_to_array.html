@@ -13,14 +13,14 @@
 
     <script>
         const arr = [];
-        const listToArray = function (obj, arr) {
+        const listToArray = function (obj) {
             // Write your code here
             if(obj.rest == null){
                 arr.push(obj.value);
                 return arr;
             }
             arr.push(obj.value);
-            return listToArray(obj.rest, arr);
+            return listToArray(obj.rest);
         };
 
         console.log(listToArray({value: 1, rest: {value: 2, rest: {value: 3,rest: null}}}, arr));
